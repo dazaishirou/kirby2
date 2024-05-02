@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(https://assets.codepen.io/7237686/background.png?format=auto);
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.kirby {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  background-image: url(https://assets.codepen.io/7237686/kirby.gif?format=auto);
+  height: 108px;
+  width: 180px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  cursor: pointer;
+}
+
+.food {
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  position: absolute;
+  top: -10%;
+  left: 75%;
+  animation: drop 2s ease forwards;
+  animation-iteration-count: infinite;
+  animation: falling 1s ease forwards;
+}
+
+.eating {
+  animation: suction 2.2s ease forwards;
+}
+
+@keyframes falling {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    top: 76%;
+  }
+  100% {
+    top: 73%;
+  }
+}
+@keyframes suction {
+  0% {
+    left: 75%;
+    top: 73%;
+  }
+  86% {
+    left: 50%;
+    top: 73%;
+    opacity: 1;
+  }
+  100% {
+    left: 50%;
+    top: 73%;
+    opacity: 0;
+  }
+}
+.play {
+  background-image: url(https://assets.codepen.io/7237686/kirby2.gif?format=auto);
+}
